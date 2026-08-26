@@ -1,8 +1,36 @@
 # Teacher Survey oTree Experiment
 
-Replication package for the oTree implementation of the teacher survey.
-The participant-facing text is in French; code comments and replication notes
-are in English.
+Replication package for the oTree implementation of the teacher survey. The paper is conditionally accepted at the *European Economic Review*, and the working paper is available on the [https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5254180](SSRN webpage).
+The participant-facing text is in French; code comments and replication notes are in English.
+
+## Suggested Citation:
+
+**Article**:
+
+```latex
+@misc{monnet_colo_dagorn_2025_gender_discrimination_teachers,
+  title        = {Determinants of Gender Discrimination by Teachers: Evidence from an Online Experiment},
+  author       = {Monnet, Marion {\textcircled{R}} Colo, Philippe {\textcircled{R}} Dagorn, Etienne},
+  year         = {2025},
+  month        = may,
+  day          = {14},
+  note         = {Available at SSRN},
+  url          = {https://ssrn.com/abstract=5254180},
+  doi          = {10.2139/ssrn.5254180}
+}
+```
+
+**Replication Package**
+
+```latex
+@misc{monnet_colo_dagorn_2025_replication_package,
+  title        = {Replication Package for ``Determinants of Gender Discrimination by Teachers: Evidence from an Online Experiment''},
+  author       = { Dagorn, Etienne and Monnet, Marion and Colo, Philippe},
+  year         = {2025},
+  note         = {Replication package},
+  url          = {[https://github.com/etiennedagorn/teacher_discrimination)](https://github.com/etiennedagorn/teacher_discrimination)}
+}
+```
 
 ## Contents
 
