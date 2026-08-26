@@ -1,0 +1,26 @@
+{{ block title }} Merci beaucoup pour votre participation ! {{ endblock }}
+{{ block content }}
+
+
+<div class="card bg-light m-3">
+
+    <p align="justify">
+        Dans le cas où vous souhaiteriez retirer les informations relatives à votre participation à cette enquête, vous serez amené à nous communiquer votre numéro de participant qui s'affiche ci-dessous par mail (enquete_enseignants@listes.ined.fr).
+        Nous vous invitons donc à le conserver précieusement.
+    </p>
+
+     <p align="justify">
+            Votre identifiant de participation est le :
+     </p>
+
+    <p align="center">
+    {{ player.id_in_group }}
+    </p>
+
+         <p align="justify">
+            Nous vous recontacterons à l'adresse mail que vous avez indiquée si vous êtes tiré au sort.
+     </p>
+</div>
+
+
+{{ endblock }}

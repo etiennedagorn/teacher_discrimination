@@ -1,0 +1,68 @@
+
+{{ block title }} {{ include_sibling 'progress_DG.html' }} {{ endblock }}
+{{ block content }}
+
+
+ <p align="justify">
+
+
+Vous jouez avec un  <span style="font-size:18px"> <em> homme </em> </span> bénévole de l'AFEV .  <img src="{{ static 'gender/transcript_boy.png' }}" width="50" height="60">
+
+ </p>
+
+
+ </p>
+
+ <p align="justify">
+Vous disposez de 70 jetons, combien en donneriez-vous à cette personne ?
+ </p>
+
+
+
+<style>
+        .mgslider-wrapper {
+            border-spacing: 10px;
+        }
+        .mgslider-limit {
+            width: 10%;
+            min-width: 75px;
+            height: 40px;
+            margin: 100px;
+            text-align: center;
+            background: #eee;
+            border: 1px solid #888;
+        }
+        .mgslider-limit, .mgslider-value {
+            font-variant-numeric: tabular-nums;
+        }
+        .mgslider-before {
+            height: 16px;
+            width: 100%;
+            background: #1e5bff;
+        }
+        .mgslider-feedback {
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+    </style>
+
+    {{ formfield_errors 'DG3_man' }}
+    <p> <center>
+    Cliquez sur la barre bleue pour activer la molette
+    </center> </p>
+
+    <div id="sliders_here"></div>
+
+    <script src="{{ static 'mgslider.js' }}"></script>
+
+    <script>
+        $(document).ready(function (event) {
+            slider1 = new mgslider("DG3_man", 0, 70, 1);
+            slider1.print(document.getElementById("sliders_here"));
+        });
+    </script>
+
+{{ next_button }}
+
+{{ endblock }}

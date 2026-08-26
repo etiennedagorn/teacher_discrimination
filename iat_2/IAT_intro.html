@@ -1,0 +1,59 @@
+{{ block title }} Test d’associations implicites {{ endblock }}
+{{ block content }}
+
+<div class="card bg-light m-3">
+    <div class="card-body">
+
+         <p align="justify">
+Dans cette partie de l’expérimentation, des mots vont défiler au centre de votre écran et vous allez devoir les associer à la ou les catégorie(s) précisée(s) en haut de l’écran,
+aussi vite que possible en utilisant les touches A et P de votre clavier.
+         </p>
+
+              <p align="justify">
+Les quatre catégories de mots sont les suivantes:
+              </p>
+
+<table style="width:100%" >
+    <tbody>
+        <tr>
+             <td style="width:40%"> Homme	</td>
+                <td>  Homme, fils, père, garçon, oncle, grand-père, mari, male </td>
+        </tr>
+
+<tr>
+    <td style="width:40%"> Femme	</td>
+    <td> Mère, épouse, tante, femme, petite-fille, femelle, grand-mère, fille </td>
+</tr>
+
+<tr>
+    <td style="width:40%"> Sciences </td>
+    <td> Astronomie, maths, chimie, physique, biologie, géologie, ingénierie </td>
+</tr>
+    <td style="width:40%"> Arts & Littérature	</td>
+   <td> Histoire, arts, lettres, anglais, philosophie, musique, littérature </td>
+</tr>
+
+    </tbody>
+</table>
+
+        <br>
+
+         <p align="justify">
+        Vous aurez à répéter cette tâche {{ Constants.num_rounds }} fois avec des consignes différentes. Soyez-attentifs
+         </p>
+
+        <p align="justify">
+            Vous commencez par deux étapes d' "entrainement" pour vous familiariser avec la tâche.
+            </p>
+
+
+        <p align="justify">
+       La cinquième étape est également une étape  d' "entrainement".
+        </p>
+
+    {{ next_button }}
+</div>
+</div>
+
+
+{{ endblock }}

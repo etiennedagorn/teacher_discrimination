@@ -1,0 +1,63 @@
+
+{{ block title }}  {{ include_sibling 'progress_DG.html' }} {{ endblock }}
+{{ block content }}
+
+<p align="justify">
+Vous jouez avec un <em> bénévole de l'AFEV tiré au sort </em>.
+
+</p>
+<p align="justify">
+Vous n'avez aucune information sur cette personne.
+</p>
+
+<p align="justify">
+Vous disposez de 70 jetons, combien en donneriez-vous à cette personne ?
+</p>
+
+<style>
+        .mgslider-wrapper {
+            border-spacing: 10px;
+        }
+        .mgslider-limit {
+            width: 10%;
+            min-width: 75px;
+            height: 40px;
+            margin: 100px;
+            text-align: center;
+            background: #eee;
+            border: 1px solid #888;
+        }
+        .mgslider-limit, .mgslider-value {
+            font-variant-numeric: tabular-nums;
+        }
+        .mgslider-before {
+            height: 16px;
+            width: 100%;
+            background: #1e5bff;
+        }
+        .mgslider-feedback {
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+    </style>
+
+    {{ formfield_errors 'DG1_amount' }}
+    <p> <center>
+    Cliquez sur la barre bleue pour activer la molette
+    </center> </p>
+
+    <div id="sliders_here"></div>
+
+    <script src="{{ static 'mgslider.js' }}"></script>
+
+    <script>
+        $(document).ready(function (event) {
+            slider1 = new mgslider("DG1_amount", 0, 50, 1);
+            slider1.print(document.getElementById("sliders_here"));
+        });
+    </script>
+
+{{ next_button }}
+
+{{ endblock }}

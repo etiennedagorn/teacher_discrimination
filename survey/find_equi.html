@@ -1,0 +1,69 @@
+{{ block title }} {{ include_sibling 'progress_survey.html' }}   {{ endblock }}
+{{ block content }}
+
+<style>
+        .mgslider-wrapper {
+            border-spacing: 10px;
+        }
+        .mgslider-limit {
+            width: 10%;
+            min-width: 75px;
+            height: 40px;
+            margin: 100px;
+            text-align: center;
+            background: #eee;
+            border: 1px solid #888;
+        }
+        .mgslider-limit, .mgslider-value {
+            font-variant-numeric: tabular-nums;
+        }
+        .mgslider-before {
+            height: 10px;
+            width: 100%;
+            background: #1e5bff;
+        }
+        .mgslider-feedback {
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+    </style>
+
+<p>
+Au début du questionnaire, vous avez attribué des notes de 0 à 30 à différents bulletins.
+</p>
+<p>
+À votre avis, quelle serait en moyenne la différence entre la note que vous avez attribuée à l'un de ces bulletins et celle qu'un de vos collègues aurait donnée ?
+
+    </p>
+
+<p>
+Cette partie est incitée financièrement. Si vous êtes tiré au sort, vous recevrez 10 euros supplémentaires si votre note sur un bulletin correspond à la note moyenne sur ce bulletin, à plus ou moins 0.25 points.
+ </p>
+
+{{ formfield_errors 'find_equi' }}
+
+  <div style="height: 25px;"></div>
+
+<body>
+    <div id="sliders_here_2"></div>
+
+
+    <script src="{{ static 'mgsslider_find_equi.js' }}"></script>
+
+    <script>
+        $(document).ready(function () {
+            var slider4 = new mgslider("find_equi", -30, 30, 0.5);
+            slider4.print(document.getElementById("sliders_here_2"));
+        });
+    </script>
+
+
+</body>
+{{ next_button }}
+
+
+
+
+
+{{ endblock }}

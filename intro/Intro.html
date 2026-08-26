@@ -1,0 +1,64 @@
+
+{{ block title }} Bienvenue  {{ endblock }}
+{{ block content }}
+<input type="hidden" name="is_mobile" id="is_mobile">
+<div class="card bg-light m-3">
+    <div class="card-body">
+
+
+      <p align="justify">
+    Vous êtes invité à répondre à une enquête en ligne développée par des chercheurs de l’Ecole Polytechnique de Zurich, de l’Institut national d’études démographiques et de l’Université de Bourgogne.
+</p>
+<p align="justify">
+    Cette étude porte sur les pratiques pédagogiques des enseignants du collège et du lycée de toutes les disciplines en France. Le questionnaire dure au total 20 minutes et est composé de 4 parties. L'ordre de la deuxième et de la troisième partie est tiré au sort, la quatrième est un bref questionnaire portant sur vos pratiques pédagogiques.
+</p>
+<p align="justify">
+    Une partie de ce questionnaire est rémunérée en fonction de vos choix. Il n'y a pas de bonne ou de mauvaise réponse, nous sommes intéressés uniquement par vos perceptions et vos réactions face à une situation donnée.
+</p>
+<p align="justify">
+    Un participant sur dix sera tiré au sort pour recevoir une indemnité d’un montant maximal de 70 euros. Pour organiser le tirage au sort et le versement de l’indemnité, votre adresse mail vous sera demandée à la fin de l’enquête. Elle sera supprimée une fois le tirage au sort et le paiement effectués.
+</p>
+
+        <p align="justify">
+        Vous pouvez nous contacter à ce mail pour toute question : enquete_enseignants@listes.ined.fr
+        </p>
+<p style="font-size:18px">
+    <b>
+        Une fois que vous avez cliqué sur "Suivant", vous ne pouvez plus retourner en arrière.
+    </b>
+</p>
+
+
+
+
+    {{ next_button }}
+</div>
+</div>
+
+
+<script>
+    function isMobile() {
+        const toMatch = [
+            /Android/i,
+            /iPhone/i,
+            /iPad/i,
+        ];
+
+        return toMatch.some((item) => navigator.userAgent.match(item));
+    }
+
+    // here is an alternative technique that checks screen resolution
+    // function isMobile() {
+    //     return ((window.innerWidth <= 800) && (window.innerHeight <= 600));
+    // }
+
+    document.getElementById('is_mobile').value = isMobile() ? 1 : 0;
+
+</script>
+
+
+
+<img src="{{ static 'univ/univ.png' }}" style="width:90%" align="center">
+
+{{ endblock }}
+

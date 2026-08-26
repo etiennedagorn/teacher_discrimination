@@ -1,0 +1,28 @@
+{{ block title }} Evaluation de bulletins scolaires  {{ endblock }}
+{{ block content }}
+
+<div class="card bg-light m-3">
+    <div class="card-body">
+
+         <p align="justify">
+Vous allez évaluer 10 bulletins scolaires comme si vous étiez le professeur principal de l’élève.
+        </p>
+
+          <p align="justify">
+Nous vous demandons de lire attentivement chaque bulletin et de réaliser trois actions:
+
+        </p>
+       <ol>
+        <li> Choisir une note globale d’appréciation du bulletin entre 0 et 30  </li>
+        <li> Choisir une mention parmi sept proposées </li>
+        <li> Choisir une appréciation parmi quatre proposées </li>
+      </ol>
+
+            {{ formfields }}
+
+</div>
+     {{ next_button }}
+</div>
+
+
+{{ endblock }}

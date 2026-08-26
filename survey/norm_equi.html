@@ -1,0 +1,57 @@
+{{ block title }} {{ include_sibling 'progress_survey.html' }}  {{ endblock }}
+{{ block content }}
+
+
+<style>
+        .mgslider-wrapper {
+            border-spacing: 10px;
+        }
+        .mgslider-limit {
+            width: 10%;
+            min-width: 75px;
+            height: 40px;
+            margin: 100px;
+            text-align: center;
+            background: #eee;
+            border: 1px solid #888;
+        }
+        .mgslider-limit, .mgslider-value {
+            font-variant-numeric: tabular-nums;
+        }
+        .mgslider-before {
+            height: 16px;
+            width: 100%;
+            background: #1e5bff;
+        }
+        .mgslider-feedback {
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+    </style>
+<div class="card bg-light m-3">
+<div>
+    <p> Au début du questionnaire, vous avez attribué des notes de 0 à 30 à différents bulletins.</p>
+
+<p>Imaginez maintenant que ces bulletins sont évalués dans le cadre d'une admission dans l'enseignement supérieur, et que le même bulletin est évalué par deux enseignants. </p>
+  <p>  À votre avis, quelle serait la différence de leurs notes que vous <em>  considéreriez </em> acceptable pour assurer un processus juste et équitable ?</p>
+    </div>
+</div>
+{{ formfield_errors 'norm_equi' }}
+
+ <div id="sliders_here"></div>
+
+ <script src="{{ static 'mgslider_accept.js' }}"></script>
+
+    <script>
+        $(document).ready(function (event) {
+            slider1 = new mgslider("norm_equi", 0, 30, 0.5);
+            slider1.print(document.getElementById("sliders_here"));
+        });
+    </script>
+
+{{ next_button }}
+
+
+
+{{ endblock }}

@@ -1,0 +1,137 @@
+ {{ block title }}  {{ include_sibling 'progress.html' }} {{ endblock }}
+{{ block content }}
+
+
+
+
+<div id="header" style="height:15%;width:100%;">
+    <div style='float:left'>
+        <table border="1" width="30">
+            <tr>
+                <tr><h3> CLASSE: Seconde 7</h3></tr>
+                <tr><h5> Nombre de retards : 4</h5></tr>
+                <tr><h5> Nombre d'absence  : 3</h5></tr>
+            </tr>
+        </table>
+    </div>
+</div>
+
+
+
+<style>
+td {
+  text-align: center;
+  vertical-align: middle;
+}
+
+tr.spaceUnder>td {
+  padding-bottom: 1em;
+}
+tr.spaceUnderLow>td {
+  padding-bottom: 0.5em;
+}
+</style>
+
+<table style="width:100%; border-width:2px; border-style:solid; border-color:#000000; padding:15px;">
+        <thead>
+        <tr class="spaceUnder">
+            <td style="width:40%;border: 2px solid black" > <b>Matière </b>
+	</td>
+                <td style="width:30%;border: 2px solid black"> <b> Moyenne élève  </b>	</td>
+                <td style="width:30%;border: 2px solid black"> <b> Moyenne classe  </b>	</td>
+        </tr>
+        </thead>
+        <tbody>
+        <tr class="spaceUnderLow">
+            <td style="width:40%;border: 0.75px solid black"> Français	</td>
+            <td style="width:30%;border: 0.75px solid black">  9.5 </td>
+            <td style="width:30%;border: 0.75px solid black"> 11  </td>
+        </tr>
+
+<tr class="spaceUnderLow">
+    <td style="width:40%;border: 0.75px solid black"> Mathématiques	</td>
+    <td style="width:30%;border: 0.75px solid black"> 7.5 </td>
+    <td style="width:30%;border: 0.75px solid black"> 10 </td>
+</tr>
+
+<tr class="spaceUnderLow">
+    <td style="width:40%;border: 0.75px solid black"> SVT	</td>
+    <td style="width:30%;border: 0.75px solid black"> 8 </td>
+    <td style="width:30%;border: 0.75px solid black"> 10.5 </td>
+</tr>
+
+<tr class="spaceUnderLow">
+    <td style="width:40%;border: 0.75px solid black"> Anglais	</td>
+    <td style="width:30%;border: 0.75px solid black"> 10 </td>
+    <td style="width:30%;border: 0.75px solid black">11.5 </td>
+</tr>
+<tr class="spaceUnderLow">
+    <td style="width:40%;border: 0.75px solid black"> Histoire	</td>
+    <td style="width:30%;border: 0.75px solid black"> 9 </td>
+    <td style="width:30%;border: 0.75px solid black"> 9.5 </td>
+</tr>
+
+<tr class="spaceUnderLow">
+    <td style="width:40%;border: 0.75px solid black"> Moyenne Générale	</td>
+    <td style="width:30%;border: 0.75px solid black"> 8.8 </td>
+    <td style="width:30%;border: 0.75px solid black"> 10.5 </td>
+</tr>
+    </tbody>
+</table>
+
+</br>
+
+<style>
+        .mgslider-wrapper {
+            border-spacing: 10px;
+        }
+        .mgslider-limit {
+            width: 10%;
+            min-width: 75px;
+            height: 40px;
+            margin: 100px;
+            text-align: center;
+            background: #eee;
+            border: 1px solid #888;
+        }
+        .mgslider-limit, .mgslider-value {
+            font-variant-numeric: tabular-nums;
+        }
+        .mgslider-before {
+            height: 16px;
+            width: 100%;
+            background: #1e5bff;
+        }
+        .mgslider-feedback {
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+    </style>
+
+    {{ formfield_errors 'note_bulletin_blind_8' }}
+    <p>
+    Quelle <b> note sur 30 </b> donneriez-vous à ce bulletin en tenant compte de la vie scolaire et des notes ? Cliquez sur la barre bleue pour activer la molette
+    </p>
+
+    <div id="sliders_here"></div>
+
+    <script src="{{ static 'mgslider_note.js' }}"></script>
+
+    <script>
+        $(document).ready(function (event) {
+            slider1 = new mgslider("note_bulletin_blind_8", 0, 30, 0.25);
+            slider1.print(document.getElementById("sliders_here"));
+        });
+    </script>
+
+{{ formfield 'mention_blind_8' }}
+
+{{ formfield 'growth_blind_8' }}
+
+
+
+
+{{ next_button }}
+
+{{ endblock }}

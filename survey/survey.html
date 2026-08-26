@@ -1,0 +1,50 @@
+{{ block title }} {{ include_sibling 'progress_survey.html' }} {{ endblock }}
+{{ block content }}
+
+
+ <table class="table">
+       <tr>
+            <th style="width:70%"> </th>
+            <td class="from" ; style="font-size:0.4em;">  Pas du tout satisfait </td>
+            <td class="from">  </td>
+            <td class="from">  </td>
+            <td class="from">  </td>
+            <td class="from">  </td><td class="from">  </td>
+            <td class="from">  </td>
+            <td class="from">  </td>
+            <td class="from">  </td>
+            <td class="from"> </td>
+            <td class="from" ; style="font-size:0.4em;"> Complètement satisfait </td>
+        </tr>
+          <tr>
+            <th style="width:70%"> </th>
+            <td class="from">  0 </td>
+            <td class="from"> 1 </td>
+            <td class="from"> 2 </td>
+            <td class="from"> 3 </td>
+            <td class="from"> 4 </td>
+            <td class="from"> 5 </td>
+            <td class="from"> 6 </td>
+              <td class="from"> 7 </td>
+            <td class="from"> 8 </td>
+            <td class="from"> 9 </td>
+            <td class="from"> 10 </td>
+        </tr>
+<tr>
+    <td>{{ form.happy.label }}</td>
+    {{ for choice in form.happy }}
+        <td>{{ choice }}</td>
+    {{ endfor }}
+</tr>
+       </table>
+
+    {{ formfield 'age'}}
+
+
+
+
+
+{{ next_button }}
+
+
+{{ endblock }}
