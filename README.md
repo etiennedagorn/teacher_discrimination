@@ -86,7 +86,7 @@ app_sequence = [
 
 ## IAT Stimuli
 
-The only source of IAT stimuli is the app-level CSV file:
+IAT stimuli is the app-level CSV file:
 
 - `iat/stimuli.csv` for the pre-dictator-game IAT.
 - `iat_2/stimuli.csv` for the post-dictator-game IAT.
